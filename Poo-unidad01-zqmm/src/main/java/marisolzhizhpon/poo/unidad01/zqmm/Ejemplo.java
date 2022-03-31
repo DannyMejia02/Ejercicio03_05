@@ -10,7 +10,7 @@ package marisolzhizhpon.poo.unidad01.zqmm;
  */
 public class Ejemplo {
     public static void main(String[] args){
-        System.out.println("HELLO WORLD");
+        System.out.println("Hola mundo");
     }
     
 }
