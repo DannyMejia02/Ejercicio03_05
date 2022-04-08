@@ -31,6 +31,7 @@ public class Empleado {
         }else{
             return retorno;
         }
+        return 0;
         
     }
     
@@ -39,15 +40,16 @@ public class Empleado {
         if(this.horasTrabajadas>=0 && this.horasTrabajadas<=limite){
             if(this.costoHora>=0 && this.costoHora<=limite1)
                 retorno = this.costoHora;
-            else{
-                if(this.)
-            }
+            
         }
+        return 0;
         
         
     }
     
     public double calcularAPagar(){
+        
+        return 0;
         
     }
         
