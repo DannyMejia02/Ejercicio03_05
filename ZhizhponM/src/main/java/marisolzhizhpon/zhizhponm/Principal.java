@@ -22,7 +22,7 @@ public class Principal {
         empleado1.horasTrabajadas = 6;
         empleado1.costoHora = 1.40;
         empleado1.añoIngreso = 2018;
-        
+     
         var empleado2 = new Empleado();
         empleado2.nombre = "Julio Leon";
         empleado2.horasTrabajadas = 10 ;
