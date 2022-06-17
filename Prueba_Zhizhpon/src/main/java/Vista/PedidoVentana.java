@@ -4,16 +4,21 @@
  */
 package Vista;
 
+import Controlador.PedidoControl;
+
 /**
  *
  * @author marisolzhizhpon
  */
 public class PedidoVentana extends javax.swing.JFrame {
+    
+    private final PedidoControl pedidoControl = new PedidoControl();
 
     /**
      * Creates new form PedidoVentana
      */
     public PedidoVentana() {
+        this.setTitle("Pedido");
         initComponents();
     }
 
@@ -53,24 +58,43 @@ public class PedidoVentana extends javax.swing.JFrame {
         jLabel5.setText("FormaDePedido:");
 
         jTextField1.setColumns(30);
-        jTextField1.setText("jTextField1");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jTextField2.setColumns(30);
-        jTextField2.setText("jTextField2");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
 
         jTextField3.setColumns(30);
-        jTextField3.setText("jTextField3");
 
         jTextField4.setColumns(30);
-        jTextField4.setText("jTextField4");
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
 
         jTextField5.setColumns(30);
-        jTextField5.setText("jTextField5");
 
         jButton1.setText("Guardar");
-        jButton1.setActionCommand("Guardar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Listar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -151,6 +175,39 @@ public class PedidoVentana extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if(evt.getSource().equals(this.jButton1)){
+            String[] args = new String[6];
+            args[0] = this.jTextField1.getText();
+            args[1] = this.jTextField2.getText();
+            args[2] = this.jTextField3.getText();
+            args[3] = this.jTextField4.getText();
+            args[4] = this.jTextField5.getText();
+            
+            this.pedidoControl.crear(args);
+            
+            
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        for(var b: this.pedidoControl.listar()){
+            System.out.println(b.toString());
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
