@@ -13,7 +13,7 @@ import Controlador.PaisControl;
  *
  * @author marisolzhizhpon
  */
-public class VentanaPais extends javax.swing.JFrame {
+public class VentanaPais extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form VentanaPais
@@ -389,11 +389,5 @@ public class VentanaPais extends javax.swing.JFrame {
     private javax.swing.JTextField txtValorEconomico;
     // End of variables declaration//GEN-END:variables
 
-    void setIconifiable(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void setClosable(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 }

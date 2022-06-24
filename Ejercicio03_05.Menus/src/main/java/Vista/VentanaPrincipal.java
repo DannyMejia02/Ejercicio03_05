@@ -52,7 +52,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jPanel1.setForeground(new java.awt.Color(153, 255, 255));
 
-        jDesktopPane1.setBackground(new java.awt.Color(255, 204, 255));
+        jDesktopPane1.setBackground(new java.awt.Color(51, 0, 255));
         jDesktopPane1.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
